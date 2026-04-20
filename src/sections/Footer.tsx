@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Dribbble, Mail } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const navLinks = [
   { label: 'Work', href: '#work' },
