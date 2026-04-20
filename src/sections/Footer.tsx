@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Dribbble } from 'lucide-react';
+import { Github, Linkedin, Twitter, Dribbble, Mail } from 'lucide-react';
 
 const navLinks = [
   { label: 'Work', href: '#work' },
@@ -9,10 +9,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Dribbble, href: 'https://dribbble.com', label: 'Dribbble' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/ismailsajid0617/', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/Ismail-2001', label: 'GitHub' },
+  { icon: Twitter, href: 'https://x.com/flow_comm', label: 'X (Twitter)' },
+  { icon: Mail, href: 'mailto:ismailsajid0617@gmail.com', label: 'Email' },
 ];
 
 export function Footer() {
@@ -48,9 +48,16 @@ export function Footer() {
               design, full-stack development, and agentic AI systems for
               high-growth businesses.
             </p>
-            <p className="font-mono text-xs text-text-muted">
-              Based in San Francisco, working worldwide.
+            <p className="font-mono text-xs text-text-muted mb-2">
+              Based in Pakistan, working worldwide.
             </p>
+            <a 
+              href="mailto:ismailsajid0617@gmail.com"
+              className="font-mono text-xs text-indigo hover:text-indigo-light transition-colors"
+              data-cursor-hover
+            >
+              ismailsajid0617@gmail.com
+            </a>
           </div>
 
           {/* Navigation */}

@@ -161,11 +161,20 @@ export function Contact() {
 
           {/* Contact Form */}
           <div id="contact-form" className="max-w-xl mx-auto">
-            <div className="flex items-center gap-3 mb-8">
-              <Mail className="w-5 h-5 text-indigo" />
-              <span className="font-mono text-sm text-text-muted uppercase tracking-wider">
-                Or send a message
-              </span>
+            <div className="flex flex-col items-center gap-4 mb-12">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-indigo" />
+                <span className="font-mono text-sm text-text-muted uppercase tracking-wider">
+                  Contact directly
+                </span>
+              </div>
+              <a 
+                href="mailto:ismailsajid0617@gmail.com" 
+                className="font-serif text-2xl md:text-3xl text-warm-white hover:text-indigo transition-all duration-300"
+                data-cursor-hover
+              >
+                ismailsajid0617@gmail.com
+              </a>
             </div>
 
             {isSubmitted ? (
