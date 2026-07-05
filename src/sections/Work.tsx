@@ -12,6 +12,7 @@ const projects = [
     category: 'Mobile Detailing',
     platform: 'Framer',
     image: '/proj_autoglow.jpg',
+    link: 'https://luxury-mobile-detailing-website-rouge.vercel.app/',
     result: 'Premium mobile detailing brand delivering ceramic protection, paint correction, and interior restoration with a luxury booking experience — built to convert visitors into appointments in under 60 seconds.',
   },
 ];
@@ -78,10 +79,15 @@ function ProjectCard({
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-void/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <span className="flex items-center gap-2 px-6 py-3 border border-warm-white text-warm-white font-mono text-sm tracking-wider uppercase">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 border border-warm-white text-warm-white font-mono text-sm tracking-wider uppercase hover:bg-warm-white hover:text-void transition-colors"
+          >
             View Case Study
             <ArrowUpRight className="w-4 h-4" />
-          </span>
+          </a>
         </div>
 
         {/* Platform Badge */}
