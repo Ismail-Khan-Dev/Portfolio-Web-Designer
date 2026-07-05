@@ -15,6 +15,15 @@ const projects = [
     link: 'https://luxury-mobile-detailing-website-rouge.vercel.app/',
     result: 'Premium mobile detailing brand delivering ceramic protection, paint correction, and interior restoration with a luxury booking experience — built to convert visitors into appointments in under 60 seconds.',
   },
+  {
+    id: 2,
+    title: 'OpsIQ',
+    category: 'AI Automation',
+    platform: 'Agentic AI',
+    image: '/proj_opsiq.jpg',
+    link: 'https://github.com/Ismail-2001/ecom-ops-automation-system',
+    result: 'OpsIQ replaces your ecommerce operations team with 7 AI agents that work 24/7, learn from every decision, and save you $125K+ annually — at 10% the cost of a single human hire.',
+  },
 ];
 
 function ProjectCard({
