@@ -24,6 +24,15 @@ const projects = [
     link: 'https://github.com/Ismail-2001/ecom-ops-automation-system',
     result: 'OpsIQ replaces your ecommerce operations team with 7 AI agents that work 24/7, learn from every decision, and save you $125K+ annually — at 10% the cost of a single human hire.',
   },
+  {
+    id: 3,
+    title: 'Life Coach',
+    category: 'Life Coach',
+    platform: 'Framer',
+    image: '/proj_lifecoach.jpg',
+    link: 'https://life-coach-livid.vercel.app/',
+    result: 'Premium coaching brand with a high-converting booking system — designed to attract high-ticket clients and turn visitors into strategy calls.',
+  },
 ];
 
 function ProjectCard({
