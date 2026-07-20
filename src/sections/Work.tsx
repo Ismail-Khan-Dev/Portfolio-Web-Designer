@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight } from 'lucide-react';
@@ -43,7 +43,9 @@ function ProjectCard({
   index: number;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const [imgError, setImgError] = useState(false);
 
+  useEffect(() => {
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;
@@ -89,11 +91,20 @@ function ProjectCard({
     >
       {/* Image Container */}
       <div className="relative aspect-[16/10] overflow-hidden bg-surface mb-6">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="project-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {imgError ? (
+          <div className="w-full h-full bg-gradient-to-br from-indigo/20 to-gold/20 flex items-center justify-center">
+            <span className="font-serif text-6xl md:text-7xl text-white/10 font-bold">
+              {project.title.split(' ').map(w => w[0]).join('')}
+            </span>
+          </div>
+        ) : (
+          <img
+            src={project.image}
+            alt={project.title}
+            onError={() => setImgError(true)}
+            className="project-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        )}
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-void/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
